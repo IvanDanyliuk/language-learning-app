@@ -1,5 +1,6 @@
 import Image, { type ImageProps } from "next/image";
 import { Button } from "@repo/ui/button";
+import { User } from '@repo/types';
 import styles from "./page.module.css";
 
 type Props = Omit<ImageProps, "src"> & {
@@ -9,6 +10,12 @@ type Props = Omit<ImageProps, "src"> & {
 
 const ThemeImage = (props: Props) => {
   const { srcLight, srcDark, ...rest } = props;
+
+  const user: User = {
+    id: 'user_1',
+    name: 'User 1',
+    email: 'user1@gmail.com',
+  }
 
   return (
     <>
