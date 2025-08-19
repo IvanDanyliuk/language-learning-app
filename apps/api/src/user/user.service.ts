@@ -9,7 +9,23 @@ export class UserService {
   }
 
   findAll() {
-    return `This action returns all user`;
+    return [
+      {
+        id: 'user_1',
+        name: 'John Doe',
+        email: 'john.doe@gmail.com',
+      },
+      {
+        id: 'user_2',
+        name: 'Jane Doe',
+        email: 'jane.doe@gmail.com',
+      },
+      {
+        id: 'user_3',
+        name: 'Sam Smith',
+        email: 'sam.smith.doe@gmail.com',
+      },
+    ];
   }
 
   findOne(id: number) {
