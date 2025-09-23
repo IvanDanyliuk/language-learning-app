@@ -10,6 +10,27 @@ export class User {
 
   @Prop({ unique: true, required: true })
   email: string;
+
+  @Prop({ required: true })
+  password: string;
+
+  @Prop()
+  photo: string;
+
+  // @Prop()
+  // wordsLearnt: string[];
+
+  @Prop()
+  currentStreak: number;
+
+  @Prop()
+  longestStreak: number;
+
+  @Prop()
+  lastStudyDate: string;
+
+  @Prop()
+  isOnboarded: boolean;
 }
 
 export const UserSchema = SchemaFactory.createForClass(User);
