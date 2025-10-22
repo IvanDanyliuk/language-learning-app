@@ -4,18 +4,14 @@ import { getUsers } from "../server/users";
 
 
 export default async function Home() {
-  const users: User[] = await getUsers();
-  console.log('USERS', users)
+  // const users: User[] = await getUsers();
+  // console.log('USERS', users)
+
+  const user = null;
 
   return (
     <div className={styles.page}>
-      <ul>
-        {users.map(user => (
-          <li key={user.id}>
-            {user.name}
-          </li>
-        ))}
-      </ul>
+      This application is going to be awesome. I'm working on it!
     </div>
   );
 }
