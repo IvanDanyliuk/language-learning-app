@@ -1,5 +1,5 @@
-@import "tailwindcss";
-@import "tw-animate-css";
+@import 'tailwindcss';
+@import 'tw-animate-css';
 
 
 html,
@@ -10,8 +10,8 @@ body {
 
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+  /* padding: 0;
+  margin: 0; */
 }
 
 a {
@@ -20,18 +20,18 @@ a {
 }
 
 @theme {
-  --primary: #ABE1F1;
-  --secondary: #EFF4F6;
-  --accent: #DAFFA5;
-  --peach: #FFDCA6;
-  --success: #5ED99A;
-  --error: #F05D4A;
-  --white: #FFFFFF;
-  --black: #101011;
-  --gray-1: #CAD1D9;
-  --gray-2: #A3A7AB;
-  --gray-3: #63686E;
-  --font-display: 'Inter'
+  --color-primary: #ABE1F1;
+  --color-secondary: #EFF4F6;
+  --color-accent: #DAFFA5;
+  --color-peach: #FFDCA6;
+  --color-success: #5ED99A;
+  --color-error: #F05D4A;
+  --color-white: #FFFFFF;
+  --color-black: #101011;
+  --color-gray-1: #CAD1D9;
+  --color-gray-2: #A3A7AB;
+  --color-gray-3: #63686E;
+  --color-font-display: 'Inter'
 }
 
 @layer base {

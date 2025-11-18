@@ -14,6 +14,7 @@
   "include": [
     "**/*.ts",
     "**/*.tsx",
+    "heroicons.d.ts",
     "next-env.d.ts",
     "next.config.js",
     ".next/types/**/*.ts"

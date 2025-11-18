@@ -2,21 +2,23 @@
 
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { SignInDataType, signInSchema } from '@repo/schemas';
+import { SignUpDataType, signUpSchema } from '@repo/schemas';
 import { ActionButton } from '@/components/buttons/ActionButton';
 import { TextField } from '@/components/inputs/TextField';
 
 
-export const SignInForm: React.FC = () => {
+export const SignUpForm: React.FC = () => {
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm<SignInDataType>({
-    resolver: zodResolver(signInSchema),
+  } = useForm<SignUpDataType>({
+    resolver: zodResolver(signUpSchema),
     defaultValues: {
+      name: '',
       email: '',
       password: '',
+      confirmPassword: '',
     },
   });
 
@@ -30,17 +32,26 @@ export const SignInForm: React.FC = () => {
       className='flex flex-col gap-3'
     >
       <TextField 
+        placeholder='Name' 
+        error={errors['name']?.message} 
+        {...register('name')} 
+      />
+      <TextField 
         placeholder='Email' 
         error={errors['email']?.message} 
         {...register('email')} 
       />
       <TextField 
         placeholder='Password' 
-        type='password'
         error={errors['password']?.message} 
         {...register('password')} 
       />
-      <ActionButton title='Sign In' />
+      <TextField 
+        placeholder='Confirm password' 
+        error={errors['confirmPassword']?.message} 
+        {...register('confirmPassword')} 
+      />
+      <ActionButton title='Sign Up' />
     </form>
   );
 };
