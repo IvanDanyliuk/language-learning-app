@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import LogoImg from '../../public/logo.svg';
 
+
 export const Logo: React.FC = () => {
   return (
     <div className='flex items-center gap-2'>
@@ -9,5 +10,5 @@ export const Logo: React.FC = () => {
         LangMate
       </p>
     </div>
-  )
-}
+  );
+};
